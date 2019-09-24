@@ -1,0 +1,55 @@
+<script>
+    function Persona(nombre, edad, apellido) {
+        this.name = nombre
+        this.edad = edad
+        this.apellido = apellido
+    }
+
+
+    function Animal(nombre) {
+        this.nombre = nombre
+        this.juguetes = []
+    }
+
+    let masDatos =  true
+    let name = prompt("Nombre del animal:")
+    let nuevoAnimal = new Animal(name)
+
+
+    do {
+        
+        let juguete = prompt("Juguete:")
+        nuevoAnimal.juguetes.push(juguete)
+
+        let mas = prompt("Mas juguetes? si/no:")
+        if(mas.trim().toUpperCase() === 'NO') {
+            masDatos = false
+        }
+    } while(masDatos)
+
+    console.log(nuevoAnimal)
+
+    //TODO tarea:
+    // - funciones sin nombre
+    // - Como dar metodos a objetos en funciones constructoras
+    //     - forEach
+    //     - Map
+    //     - filter
+
+    
+    /*let masDatos =  true
+    let arregloPersonas = []
+    while(masDatos) {
+        let name = prompt("Nombre:")
+        let edad = prompt("Edad:")
+        let apellido = prompt("Apellido:")
+        let nuevaPersona = new Persona(name, edad, apellido)
+        arregloPersonas.push(nuevaPersona)
+        let mas = prompt("Mas usuarios? si/no:")
+        if(mas.trim().toUpperCase() === 'NO') {
+            masDatos = false
+        }
+    } */
+
+
+</script>    
