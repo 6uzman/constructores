@@ -1,0 +1,27 @@
+<script>
+
+        function Persona(nombre, edad, email) {
+            this.nombre = nombre
+            this.edad = edad
+            this.email = email
+        }
+    
+        let muchasPersonas = []
+        let continuar = true
+    
+        do {
+            let name = prompt("Nombre:")
+            let edad = prompt("Edad:")
+            let email = prompt("Email:")
+            let person = new Persona(name, edad, email)
+            muchasPersonas.push(person)
+    
+            if(prompt("Mas datos si/no:").trim().toUpperCase() === 'NO') {
+                continuar = false
+            }
+        } while(continuar)
+        
+    
+        console.log(muchasPersonas)
+            
+    </script>    
